@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item android:title="GENERAL">
+        <menu>
+            <item android:id="@+id/nav_home"
+                android:icon="@drawable/message"
+                android:title="home"/>
+            <item android:id="@+id/addusers"
+                android:icon="@drawable/message"
+                android:title="adduser"/>
+
+            <item android:id="@+id/logout"
+                android:icon="@mipmap/message"
+                android:title="logout"/>
+
+
+
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+
+
+        <item android:id="@+id/productgen"
+            android:icon="@drawable/message"
+            android:title="packaging"/>
+
+
+
+
+        <item android:id="@+id/nav_rawm_entry"
+            android:icon="@drawable/message"
+            android:title="receive"/>
+
+        <item android:id="@+id/nav_raw_mixing"
+            android:icon="@drawable/message"
+            android:title="production"/>
+        <item android:id="@+id/addproduct"
+            android:icon="@drawable/message"
+            android:title="add new product"
+            />
+        <item android:id="@+id/addraw"
+            android:icon="@drawable/message"
+            android:title="add new raw description"
+            />
+        <item android:id="@+id/addcar"
+            android:icon="@drawable/message"
+            android:title="add new car"/>
+        <item android:id="@+id/addsupplier"
+            android:icon="@drawable/message"
+            android:title="add new supplier"
+            />
+
+
+
+
+
+
+
+    </group>
+
+    <item android:title="transist">
+        <menu>
+            <item android:id="@+id/trans_chuka"
+                android:icon="@drawable/message"
+                android:title="trans"/>
+
+
+        </menu>
+    </item>
+    <item android:title="status">
+        <menu>
+            <item android:id="@+id/status_chuka"
+                android:icon="@drawable/message"
+                android:title="status"/>
+
+
+
+        </menu>
+    </item>
+
+    <item android:title="REPORTS">
+        <menu>
+            <item android:id="@+id/reports"
+                android:icon="@drawable/message"
+                android:title="reports"
+                />
+            <item android:id="@+id/nav_get_contents"
+                android:icon="@drawable/message"
+                android:title="get_product_contents"
+
+                />
+
+
+
+
+        </menu>
+    </item>
+
+
+
+</menu>

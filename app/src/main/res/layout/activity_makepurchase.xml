@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.trevorjumia.makepurchase">
+
+    <TextView
+        android:id="@+id/listdata"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="299dp"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="278dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="231dp"
+        android:ems="10"
+        android:hint="amount"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="228dp"
+        android:ems="10"
+        android:hint="location"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/addcart"
+        android:layout_width="306dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="125dp"
+        android:text="add to cart" />
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="22dp"
+        android:text="Pay" />
+
+</RelativeLayout>
