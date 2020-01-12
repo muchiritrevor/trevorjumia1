@@ -2,11 +2,13 @@ package com.example.trevorjumia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -23,6 +25,7 @@ public class register extends AppCompatActivity {
 public EditText loginnametxt,loginpasswordtxt,emailtxt,farmer_buyertxt,phoneno;
 public  String loginname,logipass,email,farmer,phone_no;
 public Button register1;
+public ProgressBar prg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +35,11 @@ public Button register1;
         emailtxt=findViewById(R.id.email);
         farmer_buyertxt=findViewById(R.id.farmer_buyer);
         phoneno=findViewById(R.id.phoneno);
+        prg=findViewById(R.id.progressBar);
+        prg.setVisibility(View.GONE);
 
        register1=findViewById(R.id.registerbtn);
+
        reg();
 
     }
@@ -42,7 +48,7 @@ public Button register1;
 
 
     public  void registeruser(){
-
+prg.setVisibility(View.VISIBLE);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -76,7 +82,7 @@ public Button register1;
             }
         };
         MySingleton.getInstance(register .this).addToRequestQueue(stringRequest);
-
+prg.setVisibility(View.GONE);
 
     }
 
@@ -85,6 +91,12 @@ public Button register1;
             @Override
             public void onClick(View v) {
                 registeruser();
+
+
+
+                       
+
+               register.this.finish();
             }
         });
     }

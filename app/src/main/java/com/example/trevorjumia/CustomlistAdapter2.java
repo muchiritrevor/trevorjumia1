@@ -17,13 +17,13 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.squareup.picasso.Picasso;
 
-public class CustomListAdapter extends BaseAdapter {
+public class CustomlistAdapter2 extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<Movie> movieItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
-    public CustomListAdapter(Activity activity, List<Movie> movieItems) {
+    public CustomlistAdapter2(Activity activity, List<Movie> movieItems) {
         this.activity = activity;
         this.movieItems = movieItems;
     }
@@ -50,13 +50,13 @@ public class CustomListAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.list_row, null);
+            convertView = inflater.inflate(R.layout.viewcart, null);
 
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
         ImageView thumbNail = (ImageView) convertView
                 .findViewById(R.id.thumbnail);
-        TextView title = (TextView) convertView.findViewById(R.id.title);
+       TextView title = (TextView) convertView.findViewById(R.id.title);
         TextView rating = (TextView) convertView.findViewById(R.id.rating);
         TextView genre = (TextView) convertView.findViewById(R.id.genre);
         TextView year = (TextView) convertView.findViewById(R.id.releaseYear);
@@ -78,10 +78,10 @@ public class CustomListAdapter extends BaseAdapter {
         title.setText(m.getTitle());
 
         // rating
-        rating.setText("Source: " + String.valueOf(m.getRating()));
+        rating.setText("Rating: " + String.valueOf(m.getRating()));
 
         // genre
-genre.setText("price per product" +m.getPrice());
+        genre.setText("price per product" +m.getPrice());
 
         // release year
         year.setText(String.valueOf(m.getYear()));

@@ -27,6 +27,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -45,6 +46,8 @@ public class addimages extends AppCompatActivity {
     Bitmap bitmap;
     String urlupload="http://192.168.43.78/www/html/trevor/upload.php";
     ProgressDialog progressbar;
+    public EditText descriptiontxt,sourcetxt,pricetxt,quantitytxt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,10 @@ public class addimages extends AppCompatActivity {
         upload=findViewById(R.id.upload);
         choose=findViewById(R.id.choose);
         img=findViewById(R.id.imageupload);
+        descriptiontxt=findViewById(R.id.description);
+        sourcetxt=findViewById(R.id.source);
+        pricetxt=findViewById(R.id.price);
+        quantitytxt=findViewById(R.id.quantity);
 
 choose.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -89,7 +96,16 @@ upload.setOnClickListener(new View.OnClickListener() {
                 Map<String, String> params = new HashMap<String,String>();
 
 String imageData=imageToString(bitmap);
+                String descriptionstr,sourcestr,pricestr,quantitystr;
+                descriptionstr=descriptiontxt.getText().toString();
+                sourcestr=sourcetxt.getText().toString();
+                pricestr=pricetxt.getText().toString();
+                quantitystr=quantitytxt.getText().toString();
                 params.put("image", imageData);
+                params.put("description", descriptionstr);
+                params.put("source", sourcestr);
+                params.put("price", pricestr);
+                params.put("quantity", quantitystr);
 
                 return params;
             }

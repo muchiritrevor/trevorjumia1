@@ -14,11 +14,9 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
 
 
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="password"
 
@@ -26,7 +24,7 @@
 
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginname" />
 
@@ -35,11 +33,9 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="60dp"
 
 
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="username"
         android:inputType="textPersonName"
@@ -53,9 +49,8 @@
 
     <Button
         android:id="@+id/registerbtn"
-        android:layout_width="390dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginBottom="64dp"
         android:text="login"
@@ -76,8 +71,8 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="403dp"
-        android:layout_height="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="email"

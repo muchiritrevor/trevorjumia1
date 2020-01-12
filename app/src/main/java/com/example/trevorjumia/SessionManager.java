@@ -40,13 +40,13 @@ editor=sharedPreferences.edit();
         return sharedPreferences.getBoolean(LOGIN,false);
 
     }
-    public void checkLogin(){
+   /* public void checkLogin(){
         if(!this.isLoggin()){
             Intent i=new Intent(context,MainActivity.class);
             context.startActivity(i);
             ((addproducts)context).finish();
         }}
-
+*/
         public HashMap<String,String> getUserDetail(){
            HashMap<String,String> user=new HashMap<>();
            user.put(NAME,sharedPreferences.getString(NAME,null));

@@ -16,8 +16,8 @@
     <!-- Movie Title -->
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="296dp"
+        android:layout_height="13dp"
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:textSize="@dimen/title"
@@ -39,7 +39,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rating"
-        android:layout_marginTop="5dp"
+
         android:layout_toRightOf="@+id/thumbnail"
         android:textColor="@color/genre"
         android:textSize="@dimen/genre" />
@@ -47,10 +47,13 @@
     <!-- Release Year -->
     <TextView
         android:id="@+id/releaseYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/genre"
+
+        android:layout_marginLeft="241dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/thumbnail"
         android:textColor="@color/year"
         android:textSize="@dimen/year" />
 

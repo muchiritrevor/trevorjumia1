@@ -3,16 +3,16 @@ package com.example.trevorjumia;
 import java.util.ArrayList;
 
 public class Movie {
-    private String title, thumbnailUrl;
-    private int year;
-    private double rating;
+    private String title, thumbnailUrl,bit;
+    private String year;
+    private String rating,price;
     private ArrayList<String> genre;
 
     public Movie() {
     }
 
-    public Movie(String name, String thumbnailUrl, int year, double rating,
-                 ArrayList<String> genre) {
+    public Movie(String name, String thumbnailUrl,String year, String rating,
+                 ArrayList<String> genre,String price) {
         this.title = name;
         this.thumbnailUrl = thumbnailUrl;
         this.year = year;
@@ -36,28 +36,32 @@ public class Movie {
         this.thumbnailUrl = thumbnailUrl;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
-    public ArrayList<String> getGenre() {
-        return genre;
+    public String getPrice() {
+        return price;
     }
 
-    public void setGenre(ArrayList<String> genre) {
-        this.genre = genre;
+    public void setPrice(String price) {
+        this.price = price;
     }
+
+
+
+
 
 }

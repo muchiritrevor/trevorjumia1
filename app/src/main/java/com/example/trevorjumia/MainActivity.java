@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    public Button login;
+    public Button login,togeg;
     private ArrayList<arrivals_session> statuscheckArrayList;
     EditText logintxt,passtxt;
     String loginstr,passstr;
@@ -40,9 +40,23 @@ public ProgressBar loading;
        logintxt=findViewById(R.id.loginname);
        passtxt=findViewById(R.id.loginpassword);
        loading=findViewById(R.id.progressBar);
+       togeg=findViewById(R.id.registerbtn);
         loading.setVisibility(View.GONE);
        login();
+       reg();
     }
+
+public void reg(){
+
+        togeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(".register");
+                startActivity(i);
+            }
+        });
+}
+
 
 
     public void login(){
@@ -100,13 +114,13 @@ public ProgressBar loading;
                                     String prevelage=dataobj.getString("privelage").trim();
 
 
-                                    Intent intent=new Intent(getApplicationContext(),itmesdisplay.class);// playerModel.setName(dataobj.getString("name"));
+                                    Intent intent=new Intent(getApplicationContext(),home.class);// playerModel.setName(dataobj.getString("name"));
                                     intent.putExtra("name",name1);
                                     intent.putExtra("email",email1);
                                     intent.putExtra("prevelage",prevelage);
                                     intent.putExtra("phone",phone);
                                     startActivity(intent);
-                                    finish();// playerModel.setEmail(dataobj.getString("email"));
+                                   // playerModel.setEmail(dataobj.getString("email"));
 
 
 
