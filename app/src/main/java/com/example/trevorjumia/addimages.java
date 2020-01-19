@@ -46,7 +46,7 @@ public class addimages extends AppCompatActivity {
     Bitmap bitmap;
     String urlupload="http://192.168.43.78/www/html/trevor/upload.php";
     ProgressDialog progressbar;
-    public EditText descriptiontxt,sourcetxt,pricetxt,quantitytxt;
+    public EditText descriptiontxt,sourcetxt,pricetxt,quantitytxt,productnametxt;
 
 
     @Override
@@ -60,6 +60,7 @@ public class addimages extends AppCompatActivity {
         sourcetxt=findViewById(R.id.source);
         pricetxt=findViewById(R.id.price);
         quantitytxt=findViewById(R.id.quantity);
+        productnametxt=findViewById(R.id.productname);
 
 choose.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -96,16 +97,18 @@ upload.setOnClickListener(new View.OnClickListener() {
                 Map<String, String> params = new HashMap<String,String>();
 
 String imageData=imageToString(bitmap);
-                String descriptionstr,sourcestr,pricestr,quantitystr;
+                String descriptionstr,sourcestr,pricestr,quantitystr,productnamestr;
                 descriptionstr=descriptiontxt.getText().toString();
                 sourcestr=sourcetxt.getText().toString();
                 pricestr=pricetxt.getText().toString();
                 quantitystr=quantitytxt.getText().toString();
+                productnamestr=productnametxt.getText().toString();
                 params.put("image", imageData);
                 params.put("description", descriptionstr);
                 params.put("source", sourcestr);
                 params.put("price", pricestr);
                 params.put("quantity", quantitystr);
+                params.put("name",productnamestr);
 
                 return params;
             }

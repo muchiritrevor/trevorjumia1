@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
 import com.squareup.picasso.Picasso;
 
 public class CustomListAdapter extends BaseAdapter {
@@ -60,6 +59,7 @@ public class CustomListAdapter extends BaseAdapter {
         TextView rating = (TextView) convertView.findViewById(R.id.rating);
         TextView genre = (TextView) convertView.findViewById(R.id.genre);
         TextView year = (TextView) convertView.findViewById(R.id.releaseYear);
+        TextView descripion=convertView.findViewById(R.id.descriptiontxt);
 
         // getting movie data for the row
         Movie m = movieItems.get(position);
@@ -75,16 +75,17 @@ public class CustomListAdapter extends BaseAdapter {
         // thumbNail.setImageUrl(m.getThumbnailUrl(), imageLoader);
 
         // title
-        title.setText(m.getTitle());
+        title.setText("NAME: "+m.getTitle());
 
         // rating
-        rating.setText("Source: " + String.valueOf(m.getRating()));
+        rating.setText("LOCATION: " + String.valueOf(m.getRating()));
 
         // genre
-genre.setText("price per product" +m.getPrice());
+genre.setText("PRICE PER PRODUCT: " +m.getPrice());
+descripion.setText("DESCRIPTION: "+m.getdescription());
 
         // release year
-        year.setText(String.valueOf(m.getYear()));
+        year.setText(String.valueOf("QUANTITY :"+m.getYear()));
 
         return convertView;
     }

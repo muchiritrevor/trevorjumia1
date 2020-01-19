@@ -88,7 +88,8 @@ addcart=findViewById(R.id.addcart);
         //sessionManager.checkLogin();
 
    String   receivedName =  intent.getStringExtra("name");
-
+        String   id =  intent.getStringExtra("id");
+        Toast.makeText(makepurchase.this, id, Toast.LENGTH_SHORT).show();
        //revelage =  intent.getStringExtra("previlage");
 
 
@@ -163,6 +164,8 @@ public void viewcartclick(){
                 Intent intent = getIntent();
                 String  price =  intent.getStringExtra("price");
                 String   receivedName =  intent.getStringExtra("name");
+                String   id =  intent.getStringExtra("id");
+
                 int cash1=Integer.parseInt(price)*Integer.parseInt(amount.getText().toString());
                 String cash=String.valueOf(cash1);
                 String locationcart=location.getText().toString();
@@ -175,11 +178,13 @@ public void viewcartclick(){
                 params.put("location", locationcart);
                 params.put("quantity", amount.getText().toString());
                 params.put("item", receivedName);
+                params.put("id", id);
 
                 return params;
             }
         };
         MySingleton.getInstance(makepurchase .this).addToRequestQueue(stringRequest);
+        Toast.makeText(makepurchase.this, " added succesfully to cart", Toast.LENGTH_SHORT).show();
 
 
 
@@ -253,8 +258,15 @@ public void viewcartclick(){
         addcart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                save_cart_data();
-            }
+               int i= Integer.parseInt(amount.getText().toString());
+                Intent intent = getIntent();
+                String  price =  intent.getStringExtra("diffrence");
+                int i2=Integer.parseInt(price);
+                if(i>i2){
+                    Toast.makeText(makepurchase.this, " quantity is not enough", Toast.LENGTH_SHORT).show();
+            }else{
+                    save_cart_data();
+            }}
         });
                 }
 

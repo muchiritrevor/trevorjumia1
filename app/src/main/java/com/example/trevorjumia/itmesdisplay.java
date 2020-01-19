@@ -111,9 +111,9 @@ secs();
                                 movie.setTitle(obj.getString("name"));
                                 movie.setThumbnailUrl(obj.getString("image"));
                                 movie.setRating(obj.getString("source"));
-                                movie.setYear(obj.getString("quantity"));
+                                movie.setYear(obj.getString("diffrence"));
                                 movie.setPrice(obj.getString("price"));
-
+                                movie.setdescription(obj.getString("description"));
 
 
 
@@ -127,6 +127,8 @@ secs();
                                 arr1[i][1]=obj.getString("image");
                                 arr1[i][2]=obj.getString("source");
                                 arr1[i][3]=obj.getString("price");
+                                arr1[i][4]=obj.getString("diffrence");
+                                arr1[i][5]=obj.getString("id");
 
 
                                 System.out.println( arr1[i][2]);
@@ -146,6 +148,8 @@ secs();
                                         intent.putExtra("name",arr1[position][0]);
                                         intent.putExtra("image",arr1[position][1]);
                                         intent.putExtra("price",arr1[position][3]);
+                                        intent.putExtra("diffrence",arr1[position][4]);
+                                        intent.putExtra("id",arr1[position][5]);
                                         intent.putExtra("user",receivedName);
                                         intent.putExtra("phone",phone);
                                         intent.putExtra("previlage",previlage);

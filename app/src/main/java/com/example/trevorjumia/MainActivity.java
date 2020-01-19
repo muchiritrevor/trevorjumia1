@@ -41,6 +41,7 @@ public ProgressBar loading;
        passtxt=findViewById(R.id.loginpassword);
        loading=findViewById(R.id.progressBar);
        togeg=findViewById(R.id.registerbtn);
+       login.setVisibility(View.VISIBLE);
         loading.setVisibility(View.GONE);
        login();
        reg();
