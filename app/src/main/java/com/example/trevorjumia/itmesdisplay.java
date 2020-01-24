@@ -39,6 +39,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -56,6 +57,7 @@ public Button cartstart;
     private ListView listView;
     private CustomListAdapter adapter;
     private ArrayList<products2> statuscheckArrayList;
+    FloatingActionButton ftn;
    public  SessionManager sessionManager;
     public  String userdetails,receivedName,email,user,phone,previlage;
     private ArrayList<String> names = new ArrayList<String>();
@@ -70,9 +72,9 @@ public Button cartstart;
         listView = (ListView) findViewById(R.id.list);
         adapter = new CustomListAdapter(this, movieList);
         listView.setAdapter(adapter);
-        cartstart=findViewById(R.id.cart_btn);
+        ftn=findViewById(R.id.cart_btn);
 startcart();
-secs();
+//secs();
         pDialog = new ProgressDialog(this);
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
@@ -203,7 +205,7 @@ secs();
 
 
     public void startcart(){
-cartstart.setOnClickListener(new View.OnClickListener() {
+ftn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url4,
@@ -283,30 +285,31 @@ Intent k=getIntent();
     }
 
 
-    public void colorchange(){
-        if( cartstart.getText().toString()=="start"){
-           // cartstart.setVisibility(View.GONE);
-            cartstart.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            cartstart.setText("cart");
-        }
-        else{
-           // cartstart.setVisibility(View.VISIBLE);
-            cartstart.setText("start");
-            cartstart.setBackgroundColor(getResources().getColor(R.color.list_row_end_color));
-        }
+//    public void colorchange(){
+//        if( ftn.getText().toString()=="start"){
+//           // cartstart.setVisibility(View.GONE);
+//            cartstart.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+//            cartstart.setText("cart");
+//        }
+//        else{
+//           // cartstart.setVisibility(View.VISIBLE);
+//            cartstart.setText("start");
+//            cartstart.setBackgroundColor(getResources().getColor(R.color.list_row_end_color));
+//        }
+//
+//
+//    }
 
 
-    }
 
-
-
-    public void secs(){
-        final Handler handler = new Handler();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                colorchange();
-                handler.postDelayed(this, 200);
-            }
-        }, 10000);
-    }}
+//    public void secs(){
+//        final Handler handler = new Handler();
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                colorchange();
+//                handler.postDelayed(this, 200);
+//            }
+//        }, 10000);
+  //  }
+}

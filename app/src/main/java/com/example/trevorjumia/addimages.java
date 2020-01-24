@@ -81,7 +81,7 @@ upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onResponse(String response) {
                 progressbar.dismiss();
-                Toast.makeText(getApplicationContext(),response,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"successfully uploaded details",Toast.LENGTH_SHORT).show();
 
             }
         }, new Response.ErrorListener() {

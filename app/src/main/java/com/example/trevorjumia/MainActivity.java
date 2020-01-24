@@ -41,7 +41,7 @@ public ProgressBar loading;
        passtxt=findViewById(R.id.loginpassword);
        loading=findViewById(R.id.progressBar);
        togeg=findViewById(R.id.registerbtn);
-       login.setVisibility(View.VISIBLE);
+     login.setVisibility(View.VISIBLE);
         loading.setVisibility(View.GONE);
        login();
        reg();
@@ -113,7 +113,7 @@ public void reg(){
                                     String email1=dataobj.getString("email").trim();
                                     String phone=dataobj.getString("phone_no").trim();
                                     String prevelage=dataobj.getString("privelage").trim();
-
+                                    login.setVisibility(View.VISIBLE);
 
                                     Intent intent=new Intent(getApplicationContext(),home.class);// playerModel.setName(dataobj.getString("name"));
                                     intent.putExtra("name",name1);
@@ -121,6 +121,7 @@ public void reg(){
                                     intent.putExtra("prevelage",prevelage);
                                     intent.putExtra("phone",phone);
                                     startActivity(intent);
+
                                    // playerModel.setEmail(dataobj.getString("email"));
 
 

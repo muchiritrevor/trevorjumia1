@@ -184,7 +184,7 @@ public void viewcartclick(){
             }
         };
         MySingleton.getInstance(makepurchase .this).addToRequestQueue(stringRequest);
-        Toast.makeText(makepurchase.this, " added succesfully to cart", Toast.LENGTH_SHORT).show();
+        Toast.makeText(makepurchase.this, " added successfully to cart", Toast.LENGTH_SHORT).show();
 
 
 
@@ -263,7 +263,7 @@ public void viewcartclick(){
                 String  price =  intent.getStringExtra("diffrence");
                 int i2=Integer.parseInt(price);
                 if(i>i2){
-                    Toast.makeText(makepurchase.this, " quantity is not enough", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(makepurchase.this, " quantity not enough ", Toast.LENGTH_SHORT).show();
             }else{
                     save_cart_data();
             }}

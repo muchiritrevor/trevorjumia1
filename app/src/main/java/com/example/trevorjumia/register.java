@@ -47,6 +47,8 @@ public ProgressBar prg;
 
 
 
+
+
     public  void registeruser(){
 prg.setVisibility(View.VISIBLE);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
@@ -94,8 +96,8 @@ prg.setVisibility(View.GONE);
 
 
 
-                       
 
+                Toast.makeText(getApplicationContext(),"successfully registered",Toast.LENGTH_SHORT).show();
                register.this.finish();
             }
         });

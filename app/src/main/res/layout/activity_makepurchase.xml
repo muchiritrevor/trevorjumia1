@@ -58,7 +58,8 @@
                     android:layout_marginStart="66dp"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:hint="amount"
+                    android:hint="quantity(kgs)"
+
                     android:inputType="number"
                     app:layout_constraintStart_toEndOf="@+id/location"
                     app:layout_constraintTop_toBottomOf="@+id/listdata" />
@@ -71,7 +72,8 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:hint="location"
+
+                    android:hint="delivery_location"
                     android:inputType="textPersonName"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/listdata" />
@@ -83,6 +85,7 @@
                     android:layout_marginStart="26dp"
                     android:layout_marginTop="31dp"
                     android:background="@drawable/my_shape"
+                    android:textColor="@android:color/white"
                     android:text="add to cart"
                     app:layout_constraintStart_toEndOf="@+id/viewcarts"
                     app:layout_constraintTop_toBottomOf="@+id/amount" />
@@ -95,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="31dp"
+                    android:textColor="@android:color/white"
                     android:background="@drawable/my_shape"
                     android:text="Pay"
                     app:layout_constraintStart_toEndOf="@+id/addcart"
@@ -105,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
-
+                    android:textColor="@android:color/white"
                     android:layout_marginTop="31dp"
                     android:background="@drawable/my_shape"
                     android:text="view_cart"
