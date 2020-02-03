@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class home extends AppCompatActivity {
-    public Button addgoods,view;
+    public Button addgoods,view,addfeeds,viewfeeds;
  public    String receivedName, email,previlage,phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,12 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         addgoods=findViewById(R.id.addproducts);
         view=findViewById(R.id.viewgoods);
+        addfeeds=findViewById(R.id.addfeeds);
+        viewfeeds=findViewById(R.id.viewgoods22);
         addgoods();
         viewgoods();
+        addfeeds();
+        viewfeeds();
 
 
 
@@ -66,6 +70,7 @@ public class home extends AppCompatActivity {
                 intent.putExtra("name",receivedName);
                 intent.putExtra("email",email);
                 intent.putExtra("prevelage",previlage);
+                    intent.putExtra("category","all");
                 intent.putExtra("phone",phone);
                 startActivity(intent);
 
@@ -75,4 +80,51 @@ public class home extends AppCompatActivity {
                 }}
         });
     }
+    public  void addfeeds(){
+        addfeeds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = getIntent();
+                receivedName =  intent1.getStringExtra("name");
+                email=  intent1.getStringExtra("email");
+                previlage =  intent1.getStringExtra("prevelage");
+                phone =  intent1.getStringExtra("phone");
+                if(previlage.equalsIgnoreCase("admin")){
+                    Intent intent=new Intent(getApplicationContext(),addfeeds.class);// playerModel.setName(dataobj.getString("name"));
+                    intent.putExtra("name",receivedName);
+                    intent.putExtra("email",email);
+                    intent.putExtra("prevelage",previlage);
+
+                    intent.putExtra("phone",phone);
+                    startActivity(intent);
+
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"accessible to admin only",Toast.LENGTH_LONG).show();
+                }}
+        });
+    }
+    public  void viewfeeds(){
+        viewfeeds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = getIntent();
+                receivedName =  intent1.getStringExtra("name");
+                email=  intent1.getStringExtra("email");
+                previlage =  intent1.getStringExtra("prevelage");
+                phone =  intent1.getStringExtra("phone");
+
+                    Intent intent=new Intent(getApplicationContext(),viewfeeds.class);// playerModel.setName(dataobj.getString("name"));
+                    intent.putExtra("name",receivedName);
+                    intent.putExtra("email",email);
+                    intent.putExtra("prevelage",previlage);
+
+                    intent.putExtra("phone",phone);
+                    startActivity(intent);
+
+
+              }
+        });
+    }
+
 }

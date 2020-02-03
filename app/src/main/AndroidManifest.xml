@@ -3,12 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.trevorjumia">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
-        android:usesCleartextTraffic="true"
         android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/message"
@@ -16,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".home"></activity>
+        <activity android:name=".viewfeeds"></activity>
+        <activity android:name=".addfeeds" />
+        <activity android:name=".home" />
         <activity android:name=".register">
             <intent-filter>
                 <action android:name=".register" />
@@ -43,13 +41,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".addproducts">
-            <intent-filter>
-                <action android:name=".addproducts" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,5 +49,9 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

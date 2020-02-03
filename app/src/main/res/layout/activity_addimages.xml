@@ -14,8 +14,9 @@
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="411dp"
-            android:layout_height="596dp"
+            android:id="@+id/cardView"
+            android:layout_width="414dp"
+            android:layout_height="646dp"
             android:elevation="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -28,6 +29,63 @@
                 android:orientation="vertical">
 
 
+                <Button
+                    android:id="@+id/choose"
+                    android:layout_width="417dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/buttoncolour"
+                    android:text="upload_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageupload" />
+
+
+                <EditText
+                    android:id="@+id/source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="location"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description" />
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="price(sh)"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+                <EditText
+                    android:id="@+id/quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="quantity(kgs)"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/source" />
+
+                <EditText
+                    android:id="@+id/productname"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price" />
+
                 <ImageView
                     android:id="@+id/imageupload"
                     android:layout_width="407dp"
@@ -38,73 +96,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:srcCompat="@drawable/veg3" />
 
-                <Button
-                    android:id="@+id/choose"
-                    android:layout_width="417dp"
-                    android:layout_height="69dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/buttoncolour"
-                    android:text="upload"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageupload" />
-
-
-                <EditText
+                <Spinner
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="10dp"
                     android:ems="10"
                     android:hint="name"
                     android:inputType="textPersonName"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/source"></EditText>
-
-                <EditText
-                    android:id="@+id/source"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="source"
-                    android:inputType="textPersonName"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/choose" />
-
-                <EditText
-                    android:id="@+id/price"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-
-                    android:ems="10"
-                    android:hint="price(sh)"
-                    android:inputType="number"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/description" />
-
-                <EditText
-                    android:id="@+id/quantity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-
-                    android:ems="10"
-                    android:hint="quantity(kgs)"
-                    android:inputType="number"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/price" />
-
-                <EditText
-                    android:id="@+id/productname"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="16dp"
-                    android:hint="description"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/quantity" />
+                    app:layout_constraintTop_toBottomOf="@+id/choose"></Spinner>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,14 +114,16 @@
 
         <Button
             android:id="@+id/upload"
-            android:layout_width="395dp"
+            android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="3dp"
             android:background="@color/buttoncolour"
             android:text="complete"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

@@ -84,15 +84,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginpassword" />
 
-    <EditText
+    <Spinner
         android:id="@+id/farmer_buyer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:textSize="10dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="farmer_buyer"
         android:inputType="textPersonName"
+        android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,8 +105,8 @@
         android:layout_marginTop="48dp"
         android:ems="10"
         android:textSize="10dp"
-        android:hint="phoneno"
-        android:inputType="textPersonName"
+        android:hint="phone_number(254.."
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/farmer_buyer" />
 

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<arrivals_session> statuscheckArrayList;
     EditText logintxt,passtxt;
     String loginstr,passstr;
-    String url2 = "http://192.168.43.78/www/html/trevor/login.php";
+    String url2 = "http://192.168.60.188/www/html/trevor/login.php";
 public ProgressBar loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

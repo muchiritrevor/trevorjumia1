@@ -6,24 +6,39 @@
 
     <string name="country_prompt">Choose a country</string>
 
+    <string name="drawer_open">Open</string>
+
+    <string name="drawer_close">Close</string>
+
+
+    <string name="title_activity_arrivals_b">adusersd</string>
+    <string name="title_activity_addusers">addusers</string>
+    <string name="title_activity_addimages">addimages</string>
+
     <string-array name="country_arrays">
         <item>farmer</item>
         <item>buyer</item>
 
     </string-array>
-
     <string-array name="reports">
         <item>Raw materials balances</item>
         <item>production balances</item>
         <item>vehicle reports</item>
     </string-array>
 
+    <string-array name="planets_array">
+        <item>farmer</item>
+        <item>buyer</item>
 
-    <string name="drawer_open">Open</string>
-    <string name="drawer_close">Close</string>
-    <string name="title_activity_arrivals_b">adusersd</string>
+    </string-array>
+    <string-array name="planets_array2">
+        <item>SELECT CATEGORY:</item>
+        <item>onions</item>
+        <item>cabbages</item>
+        <item>maize</item>
+        <item>beans</item>
+        <item>potatoes</item>
 
-    <string name="title_activity_addusers">addusers</string>
-    <string name="title_activity_addimages">addimages</string>
+    </string-array>
 </resources>
 

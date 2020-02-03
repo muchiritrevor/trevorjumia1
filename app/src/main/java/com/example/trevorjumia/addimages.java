@@ -26,10 +26,13 @@ import androidx.core.app.ActivityCompat;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -44,10 +47,10 @@ public class addimages extends AppCompatActivity {
     public ImageView img;
     final int CODE_GALLERY_REQUEST=999;
     Bitmap bitmap;
-    String urlupload="http://192.168.43.78/www/html/trevor/upload.php";
+    String urlupload="http://192.168.60.188/www/html/trevor/upload.php";
     ProgressDialog progressbar;
-    public EditText descriptiontxt,sourcetxt,pricetxt,quantitytxt,productnametxt;
-
+    public EditText sourcetxt,pricetxt,quantitytxt,productnametxt;
+Spinner descriptiontxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,12 @@ public class addimages extends AppCompatActivity {
         pricetxt=findViewById(R.id.price);
         quantitytxt=findViewById(R.id.quantity);
         productnametxt=findViewById(R.id.productname);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),
+                R.array.planets_array2, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        descriptiontxt.setAdapter(adapter);
 
 choose.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -97,23 +106,38 @@ upload.setOnClickListener(new View.OnClickListener() {
                 Map<String, String> params = new HashMap<String,String>();
 
 String imageData=imageToString(bitmap);
+              descriptiontxt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                        final   String       farmer2=(String)parentView.getItemAtPosition(position);
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parentView) {
+                        // your code here
+                    }
+
+                });
                 String descriptionstr,sourcestr,pricestr,quantitystr,productnamestr;
-                descriptionstr=descriptiontxt.getText().toString();
+
                 sourcestr=sourcetxt.getText().toString();
                 pricestr=pricetxt.getText().toString();
                 quantitystr=quantitytxt.getText().toString();
                 productnamestr=productnametxt.getText().toString();
                 params.put("image", imageData);
-                params.put("description", descriptionstr);
                 params.put("source", sourcestr);
                 params.put("price", pricestr);
                 params.put("quantity", quantitystr);
                 params.put("name",productnamestr);
+                params.put("description",descriptiontxt.getSelectedItem().toString());
 
                 return params;
             }
         };
         MySingleton.getInstance(addimages .this).addToRequestQueue(stringRequest);
+        Intent i=new Intent(addimages.this,home.class);
+        startActivity(i);
     }
 });
     }

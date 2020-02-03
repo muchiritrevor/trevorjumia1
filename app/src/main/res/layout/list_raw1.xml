@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp">
+
+    <!-- Thumbnail Image -->
+
+    <!-- Movie Title -->
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="257dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Rating -->
+
+    <!-- Genre -->
+
+    <!-- Release Year -->
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/thumbnail"
+
+        android:textStyle="bold"
+        android:textSize="@dimen/rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/descriptiontxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genre"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/thumbnail"
+
+        android:textSize="@dimen/genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

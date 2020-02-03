@@ -51,11 +51,11 @@ public class makepurchase extends AppCompatActivity {
     ImageView imageView;
 
     private static final String url = "https://api.androidhive.info/json/movies.json";
-    String url2 = "http://192.168.43.78/www/html/trevor/addcart.php";
-    String url3= "http://192.168.43.78/www/html/trevor/MpesaTesting/initiate.php";
-    String url5= "http://192.168.43.78/www/html/trevor/carttotal.php";
-    String url6= "http://192.168.43.78/www/html/trevor/getcart.php";
-    String url7= "http://192.168.43.78/www/html/trevor/viewcart.php";
+    String url2 = "http://192.168.43.188/www/html/trevor/addcart.php";
+    String url3= "http://192.168.43.188/www/html/trevor/MpesaTesting/initiate.php";
+    String url5= "http://192.168.43.188/www/html/trevor/carttotal.php";
+    String url6= "http://192.168.43.188/www/html/trevor/getcart.php";
+    String url7= "http://192.168.43.188/www/html/trevor/viewcart.php";
 
     private ProgressDialog pDialog;
     private List<Movie> movieList = new ArrayList<Movie>();
@@ -97,7 +97,7 @@ addcart=findViewById(R.id.addcart);
 
                 //
         user =  intent.getStringExtra("user");
-        String urlimage="http://192.168.43.78/www/html/trevor/";
+        String urlimage="http://192.168.60.188/www/html/trevor/";
         String suburl=intent.getStringExtra("image");
         String Combined=urlimage.concat(suburl);
        Picasso.get().load(Combined).error(R.mipmap.ic_launcher).into(imageView);
@@ -145,9 +145,9 @@ public void viewcartclick(){
 
     public void   save_cart_data(){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-               // Log.d(TAG, response);
+                    @Override
+                    public void onResponse(String response) {
+                        // Log.d(TAG, response);
 
             }
         }, new Response.ErrorListener() {

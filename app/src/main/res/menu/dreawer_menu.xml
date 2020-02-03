@@ -9,9 +9,7 @@
             <item android:id="@+id/nav_home"
                 android:icon="@drawable/message"
                 android:title="home"/>
-            <item android:id="@+id/addusers"
-                android:icon="@drawable/message"
-                android:title="adduser"/>
+
 
             <item android:id="@+id/logout"
                 android:icon="@mipmap/message"
@@ -26,35 +24,29 @@
 
 
 
-        <item android:id="@+id/productgen"
+        <item android:id="@+id/cabbages"
             android:icon="@drawable/message"
-            android:title="packaging"/>
+            android:title="cabbages"/>
 
 
 
 
-        <item android:id="@+id/nav_rawm_entry"
+        <item android:id="@+id/onions"
             android:icon="@drawable/message"
-            android:title="receive"/>
+            android:title="onions"/>
 
-        <item android:id="@+id/nav_raw_mixing"
+        <item android:id="@+id/maize"
             android:icon="@drawable/message"
-            android:title="production"/>
-        <item android:id="@+id/addproduct"
+            android:title="maize"/>
+        <item android:id="@+id/beans"
             android:icon="@drawable/message"
-            android:title="add new product"
+            android:title="beans"
             />
-        <item android:id="@+id/addraw"
+        <item android:id="@+id/potatoes"
             android:icon="@drawable/message"
-            android:title="add new raw description"
+            android:title="potatoes"
             />
-        <item android:id="@+id/addcar"
-            android:icon="@drawable/message"
-            android:title="add new car"/>
-        <item android:id="@+id/addsupplier"
-            android:icon="@drawable/message"
-            android:title="add new supplier"
-            />
+
 
 
 
@@ -64,43 +56,6 @@
 
     </group>
 
-    <item android:title="transist">
-        <menu>
-            <item android:id="@+id/trans_chuka"
-                android:icon="@drawable/message"
-                android:title="trans"/>
-
-
-        </menu>
-    </item>
-    <item android:title="status">
-        <menu>
-            <item android:id="@+id/status_chuka"
-                android:icon="@drawable/message"
-                android:title="status"/>
-
-
-
-        </menu>
-    </item>
-
-    <item android:title="REPORTS">
-        <menu>
-            <item android:id="@+id/reports"
-                android:icon="@drawable/message"
-                android:title="reports"
-                />
-            <item android:id="@+id/nav_get_contents"
-                android:icon="@drawable/message"
-                android:title="get_product_contents"
-
-                />
-
-
-
-
-        </menu>
-    </item>
 
 
 

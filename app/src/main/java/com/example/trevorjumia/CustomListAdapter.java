@@ -64,7 +64,7 @@ public class CustomListAdapter extends BaseAdapter {
         // getting movie data for the row
         Movie m = movieItems.get(position);
 
-        String urlimage="http://192.168.43.78/www/html/trevor/";
+        String urlimage="http://192.168.60.188/www/html/trevor/";
         String suburl="upload/images/932222365_1576826998.jpeg";
         String Combined=urlimage.concat(m.getThumbnailUrl());
 
